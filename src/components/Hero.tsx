@@ -165,7 +165,10 @@ const Hero = () => {
             className="order-1 lg:order-2 relative w-full max-w-2xl mx-auto lg:mx-0 lg:ml-auto aspect-square lg:aspect-auto"
             variants={heroImageVariant}
           >
-            <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px] flex items-center justify-center rounded-3xl overflow-visible">
+            <div
+              className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px] flex items-center justify-center rounded-3xl"
+              style={{ overflow: 'hidden', width: '120%', marginLeft: '-10%' }}
+            >
               <div
                 style={{
                   width: '100%',
@@ -179,7 +182,7 @@ const Hero = () => {
                   loading="eager"
                   style={{
                     width: '100%',
-                    height: '110%',
+                    height: '130%',
                     border: 'none',
                     background: 'transparent',
                   }}

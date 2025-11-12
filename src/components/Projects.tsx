@@ -9,23 +9,21 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Campus Event Manager",
-      description: "A full-stack web application for managing college events, registrations, and attendance tracking.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-      tech: ["React", "Node.js", "MongoDB", "Express"],
-      github: "#",
-      demo: "#",
-      author: "Team Eclipse",
+      title: "AI-powered content generation",
+      description: "Creator AI is an AI-powered content generation application",
+      image: "https://i.ibb.co/3J1LhgT/Screenshot-2025-11-13-011217.png",
+      tech: ["React", "Liveblocks", "Yjs", "Drizzle", "Node.js"],
+      github: "https://github.com/Abhishek-ch30/Ai_automation",
+      demo: "https://ai-automation-1vmt.onrender.com/"
     },
     {
       id: 2,
-      title: "Code Playground",
-      description: "An online code editor with real-time collaboration and syntax highlighting for multiple languages.",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
-      tech: ["Next.js", "TypeScript", "Socket.io", "Monaco Editor"],
-      github: "#",
-      demo: "#",
-      author: "Team Zenith",
+      title: "Business Website",
+      description: "Built for IT solution business to provide web app development services",
+      image: "https://i.ibb.co/CddH1Rr/Screenshot-2025-11-13-011605.png",
+      tech: ["React", "Tailwind CSS", "Supabase"],
+      github: "https://github.com/Abhishek-ch30/ElevateEdge_main_web",
+      demo: "https://elevate-edge-main-web.vercel.app/"
     },
     {
       id: 3,
@@ -165,15 +163,22 @@ const Projects = () => {
                       <span className="font-medium">Code</span>
                     </motion.a>
                     
-                    <HoverButton className="flex items-center gap-2">
-                      <motion.div
-                        whileHover={{ scale: 1.2 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <ExternalLink size={18} />
-                      </motion.div>
-                      <span className="font-medium">Live Demo</span>
-                    </HoverButton>
+                    <a 
+                      href={project.demo} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      <HoverButton className="flex items-center gap-2">
+                        <motion.div
+                          whileHover={{ scale: 1.2 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <ExternalLink size={18} />
+                        </motion.div>
+                        <span className="font-medium">Live Demo</span>
+                      </HoverButton>
+                    </a>
                   </div>
                 </div>
               </motion.div>

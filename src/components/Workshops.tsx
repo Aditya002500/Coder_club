@@ -10,45 +10,25 @@ import { fadeInUp, slideInUp, staggerContainer, staggerItem } from "@/lib/animat
 const Workshops = () => {
   const workshops = [
     {
-      title: "React & TypeScript Masterclass",
-      date: "March 15, 2025",
-      venue: "Lab 301, ISE Block",
+      title: "Low-Code, No-Code Development",
+      date: "17/11/2025",
+      venue: "Venue to be announced",
       status: "upcoming",
-      attendees: 45,
       description:
-        "Learn modern React patterns, TypeScript integration, and build a full-stack application.",
-      tags: ["Frontend", "TypeScript", "React"],
+        "Learn to build and deploy your first website without writing a single line of code. Perfect for beginners!",
+      tags: ["Web Development", "No-Code", "Beginner Friendly"],
+      targetAudience: "First-year ISE students"
     },
     {
-      title: "Data Structures Deep Dive",
-      date: "March 22, 2025",
-      venue: "Seminar Hall, ISE",
+      title: "DSA BASICS",
+      date: "25/12/2025",
+      venue: "Venue to be announced",
       status: "upcoming",
-      attendees: 60,
       description:
-        "Master essential DSA concepts with hands-on problem solving and competitive programming tips.",
-      tags: ["DSA", "Algorithms", "Problem Solving"],
-    },
-    {
-      title: "Building REST APIs with Node.js",
-      date: "March 29, 2025",
-      venue: "Lab 302, ISE Block",
-      status: "upcoming",
-      attendees: 38,
-      description:
-        "Create scalable backend services, implement authentication, and deploy to the cloud.",
-      tags: ["Backend", "Node.js", "API"],
-    },
-    {
-      title: "Git & GitHub Essentials",
-      date: "February 28, 2025",
-      venue: "Online",
-      status: "past",
-      attendees: 75,
-      description:
-        "Version control fundamentals, collaborative workflows, and open source contribution.",
-      tags: ["Git", "GitHub", "DevOps"],
-    },
+        "Master the fundamentals of Data Structures and Algorithms with hands-on practice.",
+      tags: ["DSA", "Algorithms", "Programming"],
+      targetAudience: "Second-year ISE students"
+    }
   ];
 
   return (
@@ -104,14 +84,12 @@ const Workshops = () => {
                           {workshop.status === "upcoming" ? "Upcoming" : "Past Event"}
                         </Badge>
                       </motion.div>
-                      <motion.div
-                        className="flex items-center space-x-1 text-sm text-foreground/60"
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <Users className="h-4 w-4" />
-                        <span>{workshop.attendees}</span>
-                      </motion.div>
+                      <div className="flex items-center space-x-4 text-sm text-foreground/70">
+                        <div className="flex items-center">
+                          <Users className="h-4 w-4 mr-2" />
+                          {workshop.targetAudience}
+                        </div>
+                      </div>
                     </div>
 
                     <motion.h3

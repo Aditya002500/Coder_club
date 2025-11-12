@@ -123,22 +123,27 @@ const NotchNavbar = () => {
             {/* Right side - Single Join Us Button and Mobile Menu */}
             <div className="flex items-center space-x-3 min-w-0 flex-shrink-0">
               {/* Single Join Us Button */}
-              <Button
-                variant="default"
-                size="sm"
-                onClick={() => scrollToSection("#join")}
-                className="
-                  bg-gradient-to-r from-primary to-primary/80
-                  hover:from-primary/90 hover:to-primary/70
-                  text-white font-medium px-4 py-2
-                  text-sm rounded-xl
-                  shadow-lg shadow-primary/25 border border-primary/30
-                  transition-all duration-300 hover:scale-105
-                  hidden sm:flex
-                "
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLScO-ql3Uu2gdhwavN7mtGFMhkgrzwRWNuDQXW3CzOaddHcqFw/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:block"
               >
-                Join Us
-              </Button>
+                <Button
+                  variant="default"
+                  size="sm"
+                  className="
+                    bg-gradient-to-r from-primary to-primary/80
+                    hover:from-primary/90 hover:to-primary/70
+                    text-white font-medium px-4 py-2
+                    text-sm rounded-xl
+                    shadow-lg shadow-primary/25 border border-primary/30
+                    transition-all duration-300 hover:scale-105
+                  "
+                >
+                  Join Us
+                </Button>
+              </a>
 
               {/* Mobile Menu Button */}
               <button

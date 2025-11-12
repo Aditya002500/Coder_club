@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Instagram, MapPin } from "lucide-react";
+import { Mail, Instagram, MapPin } from "lucide-react";
 import { HoverButton } from "@/components/ui/hover-button";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -74,11 +74,11 @@ const Contact = () => {
                         <div>
                           <p className="font-semibold mb-1">Email</p>
                           <motion.a
-                            href="mailto:codersclub@university.edu"
+                            href="mailto:codersclubrvitm@gmail.com"
                             className="text-foreground/70 hover:text-primary transition-colors"
                             whileHover={{ color: "var(--primary)" }}
                           >
-                            codersclub@university.edu
+                            codersclubrvitm@gmail.com
                           </motion.a>
                         </div>
                       </motion.div>
@@ -105,7 +105,7 @@ const Contact = () => {
                           <p className="text-foreground/70">
                             Department of ISE
                             <br />
-                            University Campus, Block A
+                           
                           </p>
                         </div>
                       </motion.div>
@@ -121,41 +121,23 @@ const Contact = () => {
                         viewport={{ once: true }}
                       >
                         <motion.a
-                          href="#"
-                          className="p-3 bg-primary/10 rounded-xl transition-colors group"
-                          variants={staggerItem}
-                          whileHover={{
-                            scale: 1.1,
-                            backgroundColor: "rgba(59, 130, 246, 0.2)",
-                            rotate: 5
-                          }}
-                          whileTap={{ scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          <Linkedin className="h-5 w-5 text-primary" />
-                        </motion.a>
-                        <motion.a
-                          href="#"
-                          className="p-3 bg-accent/10 rounded-xl transition-colors group"
-                          variants={staggerItem}
-                          whileHover={{
-                            scale: 1.1,
-                            backgroundColor: "rgba(145, 47, 86, 0.2)",
-                            rotate: -5
-                          }}
+                          href="https://www.instagram.com/codersclub.rvitm"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-colors"
+                          whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.95 }}
                           transition={{ duration: 0.2 }}
                         >
                           <Instagram className="h-5 w-5 text-accent" />
                         </motion.a>
                         <motion.a
-                          href="mailto:codersclub@university.edu"
+                          href="mailto:codersclubrvitm@gmail.com"
                           className="p-3 bg-accent/10 rounded-xl transition-colors group"
                           variants={staggerItem}
                           whileHover={{
                             scale: 1.1,
                             backgroundColor: "rgba(168, 85, 247, 0.2)",
-                            rotate: 5
                           }}
                           whileTap={{ scale: 0.95 }}
                           transition={{ duration: 0.2 }}
@@ -193,15 +175,15 @@ const Contact = () => {
                       typically respond within 24-48 hours.
                     </p>
                     
-                    <HoverButton
-                      className="w-full mb-8"
-                      onClick={() =>
-                        (window.location.href = "mailto:codersclub@university.edu")
-                      }
-                    >
-                      <Mail className="mr-2 h-5 w-5" />
-                      Email Us
-                    </HoverButton>
+                    <a href="mailto:codersclubrvitm@gmail.com">
+                      <HoverButton
+                        className="w-full md:w-auto"
+                        variant="outline"
+                      >
+                        <Mail className="mr-2 h-5 w-5" />
+                        Email Us
+                      </HoverButton>
+                    </a>
 
                     <motion.div
                       className="p-6 bg-primary/5 rounded-xl border border-primary/10"

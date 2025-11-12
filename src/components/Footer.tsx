@@ -1,4 +1,4 @@
-import { Code2, Mail, Linkedin, Instagram, Heart } from "lucide-react";
+import { Code2, Mail, Instagram, Heart } from "lucide-react";
 
 const Footer = () => {
   const quickLinks = [
@@ -60,20 +60,18 @@ const Footer = () => {
             </h4>
             <div className="flex space-x-4 mb-4">
               <a
-                href="mailto:codersclub@university.edu"
+                href="mailto:codersclubrvitm@gmail.com"
                 className="p-3 backdrop-blur-sm border border-white/10 hover:border-white/20 rounded-lg transition-all hover:backdrop-blur-md"
+                aria-label="Email us"
               >
                 <Mail className="h-5 w-5 text-white drop-shadow-lg" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/codersclub.rvitm"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 backdrop-blur-sm border border-white/10 hover:border-white/20 rounded-lg transition-all hover:backdrop-blur-md"
-              >
-                <Linkedin className="h-5 w-5 text-white drop-shadow-lg" />
-              </a>
-              <a
-                href="#"
-                className="p-3 backdrop-blur-sm border border-white/10 hover:border-white/20 rounded-lg transition-all hover:backdrop-blur-md"
+                aria-label="Follow us on Instagram"
               >
                 <Instagram className="h-5 w-5 text-white drop-shadow-lg" />
               </a>
@@ -81,10 +79,10 @@ const Footer = () => {
             <p className="dot-background-text text-sm">
               Email:{" "}
               <a
-                href="mailto:codersclub@university.edu"
+                href="mailto:codersclubrvitm@gmail.com"
                 className="hover:text-primary transition-colors"
               >
-                codersclub@university.edu
+                codersclubrvitm@gmail.com
               </a>
             </p>
           </div>

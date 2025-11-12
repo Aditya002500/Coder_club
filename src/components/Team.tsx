@@ -1,4 +1,4 @@
-import { Linkedin } from "lucide-react";
+import { Linkedin, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { AnimatedSection, AnimatedContainer, AnimatedItem } from "@/components/ui/animated-section";
@@ -9,11 +9,12 @@ type TeamMemberProps = {
   role: string;
   avatar: string;
   linkedin: string;
+  github?: string;
   level?: string;
   isVerified?: boolean;
 };
 
-function TeamMemberCard({ name, role, avatar, linkedin, level, isVerified = false }: TeamMemberProps) {
+function TeamMemberCard({ name, role, avatar, linkedin, github, level, isVerified = false }: TeamMemberProps) {
   return (
     <motion.div
       className="group relative overflow-hidden rounded-2xl lg:rounded-3xl glass-card p-4 sm:p-6 w-full max-w-sm mx-auto transition-all duration-500"
@@ -87,10 +88,11 @@ function TeamMemberCard({ name, role, avatar, linkedin, level, isVerified = fals
         </p>
       </motion.div>
 
-      {/* LinkedIn Button */}
-      <div className="mt-4 sm:mt-6 flex justify-center relative z-10">
+      {/* Social Links */}
+      <div className="mt-4 sm:mt-6 flex justify-center gap-3 relative z-10">
+        {/* LinkedIn Button */}
         <motion.a
-          href={linkedin}
+          href={linkedin.startsWith('http') ? linkedin : `https://${linkedin}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-card text-primary transition-all duration-300"
@@ -109,6 +111,30 @@ function TeamMemberCard({ name, role, avatar, linkedin, level, isVerified = fals
             <Linkedin className="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-sm" />
           </motion.div>
         </motion.a>
+
+        {/* GitHub Button - Only show if GitHub URL is provided */}
+        {github && (
+          <motion.a
+            href={github.startsWith('http') ? github : `https://github.com/${github}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-card text-foreground transition-all duration-300"
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "rgba(0, 0, 0, 0.1)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            aria-label={`View ${name}'s GitHub profile`}
+          >
+            <motion.div
+              whileHover={{ scale: 1.2, rotate: 10 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Github className="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-sm" />
+            </motion.div>
+          </motion.a>
+        )}
       </div>
 
       {/* Animated border on hover */}
@@ -142,41 +168,41 @@ const Team = () => {
     {
       name: "Chandan K V",
       role: "President",
-      level: "Zenith",
       image: "https://i.ibb.co/rKx4qdB9/Whats-App-Image-2025-11-11-at-17-12-10-2f8b78ef-modified.png",
       alt: "Chandan K V - Head",
       linkedin: "www.linkedin.com/Chandan-K-V",
+      github: "https://github.com/The-ChandanKV",
     },
     {
-      name: "Abhishek Kumar Choudhary",
-      role: "Website Head",
-      level: "Zenith",
+      name: "Abhishek Choudhary",
+      role: "Technical Head",
       image: "https://i.ibb.co/rKFhyFVp/Whats-App-Image-2025-11-07-at-19-34-43-a04da05b-modified.png",
       alt: "Abhishek C - Website Head",
       linkedin: "https://www.linkedin.com/in/abhishek-kumar-choudhary-155052292",
+      github: "https://github.com/Abhishek-ch30",
     },
     {
       name: "Amruta Bhargav K",
       role: "Design Head",
-      level: "Zenith",
       image: "https://i.postimg.cc/s2ph7cQP/Whats-App-Image-2025-11-11-at-19-25-34-4fa63faa-modified.png",
       alt: "Amruta Bhargav K - Design Head",
       linkedin: "https://www.linkedin.com/in/amruta-bhargav-k-b26a242a7",
+      github: "https://github.com/AmrutaBK",
     },
     {
       name: "Faiza V",
       role: "Content Head",
-      level: "Zenith",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Faiza",
+      image: "https://i.ibb.co/JWdC32hR/cropped-circle-image.png",
       linkedin: "https://www.linkedin.com/in/faiza-v-k-40a78616b/",
+      github: "https://github.com/faizavk",
     },
     {
       name: "Aditi Karnawat",
       role: "Technical Head",
-      level: "Zenith",
       image: "https://i.ibb.co/Zp4Dh4fW/IMG-20251111-223545-modified.png",
       alt: "Aditi Karnawat - Technical Head",
       linkedin: "https://www.linkedin.com/in/aditi-karnawat-55606b296/",
+      github: "https://github.com/AditiKarnawat",
     },
   
   ];
@@ -248,7 +274,8 @@ const Team = () => {
                   role={member.role}
                   avatar={member.image}
                   linkedin={member.linkedin}
-                  level={member.level}
+                  github={member.github}
+                  
                 />
               </AnimatedItem>
             ))}

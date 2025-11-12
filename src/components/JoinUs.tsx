@@ -162,17 +162,20 @@ const JoinUs = () => {
                 </motion.div>
 
                 <div className="text-center space-y-4">
-                  <Button
-                    className="mt-8 group mx-auto btn-with-icon"
-                    size="lg"
-                    onClick={() => {
-                      // Handle join now
-                      console.log("Join Now clicked");
-                    }}
+                  <a 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScO-ql3Uu2gdhwavN7mtGFMhkgrzwRWNuDQXW3CzOaddHcqFw/viewform" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
                   >
-                    Join the Club
-                    <ArrowRight className="transition-transform group-hover:translate-x-1" />
-                  </Button>
+                    <Button
+                      className="mt-8 group mx-auto btn-with-icon"
+                      size="lg"
+                    >
+                      Join the Club
+                      <ArrowRight className="transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </a>
                   <p className="responsive-text-sm dot-background-text">
                     Membership is open to all ISE students. No prior coding
                     experience required!

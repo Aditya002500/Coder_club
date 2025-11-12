@@ -1,73 +1,42 @@
-# Welcome to your Lovable project
+Coder Club
+Welcome to Coder Club! This is a modern, responsive web application designed to showcase club activities, projects, workshops, and resources for coding enthusiasts. Built with React, TypeScript, Vite, and Tailwind CSS, the project emphasizes clean UI, modular components, and scalability.
 
-## Project info
+🚀 Features
+Landing Page: Engaging hero section, about, and contact info.
+Projects & Workshops: Dedicated sections to highlight club projects and workshops.
+Team & Join Us: Meet the team and learn how to become a member.
+Gallery: Bento-style and standard galleries for event photos.
+Resources: Curated resources for learning and growth.
+Modern UI: Custom components, glass overlays, curved sections, and more.
+Responsive Design: Mobile-friendly layouts and navigation.
+🛠️ Tech Stack
+Frontend: React, TypeScript, Vite
+Styling: Tailwind CSS, PostCSS
+Component System: Modular, reusable components in components and ui
+State & Hooks: Custom hooks for mobile detection, scroll animation, and toasts
+📁 Project Structure
+🧑‍💻 Getting Started
+Install dependencies
 
-**URL**: https://lovable.dev/projects/eb204e10-9735-426c-b2d3-83fe385be6e2
+Start the development server
 
-## How can I edit this code?
+Build for production
 
-There are several ways of editing your application.
+Preview production build
 
-**Use Lovable**
+📦 Scripts
+npm run dev – Start local dev server
+npm run build – Build for production
+npm run preview – Preview production build
+npm run lint – Lint codebase
+🤝 Contributing
+Contributions are welcome! Please fork the repo, create a new branch, and submit a pull request.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/eb204e10-9735-426c-b2d3-83fe385be6e2) and start prompting.
+📄 License
+This project is licensed under the MIT License.
 
-Changes made via Lovable will be committed automatically to this repo.
+📬 Contact
+For questions or suggestions, open an issue or contact the maintainers.
 
-**Use your preferred IDE**
+Enjoy coding with Coder Club! 🚀
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/eb204e10-9735-426c-b2d3-83fe385be6e2) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)

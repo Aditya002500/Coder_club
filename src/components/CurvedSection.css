@@ -1,0 +1,234 @@
+/* Curved Section Styles */
+.curved-section {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Ensure smooth transitions between curved sections */
+.curved-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  backdrop-filter: inherit;
+  background: inherit;
+}
+
+/* Top curved section (Hero) - Enhanced curves */
+.curved-section--top {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 120px), 85% calc(100% - 60px), 70% calc(100% - 20px), 50% 100%, 30% calc(100% - 20px), 15% calc(100% - 60px), 0 calc(100% - 120px));
+  margin-bottom: -120px;
+}
+
+/* Middle curved sections - Enhanced curves */
+.curved-section--middle {
+  clip-path: polygon(0 120px, 15% 60px, 30% 20px, 50% 0, 70% 20px, 85% 60px, 100% 120px, 100% calc(100% - 120px), 85% calc(100% - 60px), 70% calc(100% - 20px), 50% 100%, 30% calc(100% - 20px), 15% calc(100% - 60px), 0 calc(100% - 120px));
+  margin-top: -60px;
+  margin-bottom: -60px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+/* Bottom curved section (Footer) - Enhanced curves */
+.curved-section--bottom {
+  clip-path: polygon(0 120px, 15% 60px, 30% 20px, 50% 0, 70% 20px, 85% 60px, 100% 120px, 100% 100%, 0 100%);
+  margin-top: -60px;
+  padding-top: 90px;
+}
+
+/* Glass effect enhancements for curved sections - Remove backgrounds */
+.curved-section--glass {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Ensure content doesn't get clipped */
+.curved-section__content {
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .curved-section__content {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .curved-section__content {
+    padding: 2rem;
+  }
+}
+
+/* Mobile adjustments (up to 640px) - Enhanced curves */
+@media (max-width: 640px) {
+  .curved-section--top {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 60px), 80% calc(100% - 30px), 60% calc(100% - 10px), 50% 100%, 40% calc(100% - 10px), 20% calc(100% - 30px), 0 calc(100% - 60px));
+    margin-bottom: -60px;
+  }
+  
+  .curved-section--middle {
+    clip-path: polygon(0 60px, 20% 30px, 40% 10px, 50% 0, 60% 10px, 80% 30px, 100% 60px, 100% calc(100% - 60px), 80% calc(100% - 30px), 60% calc(100% - 10px), 50% 100%, 40% calc(100% - 10px), 20% calc(100% - 30px), 0 calc(100% - 60px));
+    margin-top: -60px;
+    margin-bottom: -60px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .curved-section--bottom {
+    clip-path: polygon(0 60px, 20% 30px, 40% 10px, 50% 0, 60% 10px, 80% 30px, 100% 60px, 100% 100%, 0 100%);
+    margin-top: -60px;
+    padding-top: 100px;
+  }
+  
+  .curved-section__content {
+    padding: 0.75rem;
+  }
+}
+
+/* Tablet adjustments (641px to 768px) - Enhanced curves */
+@media (min-width: 641px) and (max-width: 768px) {
+  .curved-section--top {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 80px), 82% calc(100% - 40px), 65% calc(100% - 15px), 50% 100%, 35% calc(100% - 15px), 18% calc(100% - 40px), 0 calc(100% - 80px));
+    margin-bottom: -80px;
+  }
+  
+  .curved-section--middle {
+    clip-path: polygon(0 80px, 18% 40px, 35% 15px, 50% 0, 65% 15px, 82% 40px, 100% 80px, 100% calc(100% - 80px), 82% calc(100% - 40px), 65% calc(100% - 15px), 50% 100%, 35% calc(100% - 15px), 18% calc(100% - 40px), 0 calc(100% - 80px));
+    margin-top: -80px;
+    margin-bottom: -80px;
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  
+  .curved-section--bottom {
+    clip-path: polygon(0 80px, 18% 40px, 35% 15px, 50% 0, 65% 15px, 82% 40px, 100% 80px, 100% 100%, 0 100%);
+    margin-top: -80px;
+    padding-top: 130px;
+  }
+  
+  .curved-section__content {
+    padding: 1rem;
+  }
+}
+
+/* Large tablet adjustments (769px to 1024px) - Enhanced curves */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .curved-section--top {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 100px), 83% calc(100% - 50px), 67% calc(100% - 18px), 50% 100%, 33% calc(100% - 18px), 17% calc(100% - 50px), 0 calc(100% - 100px));
+    margin-bottom: -100px;
+  }
+  
+  .curved-section--middle {
+    clip-path: polygon(0 100px, 17% 50px, 33% 18px, 50% 0, 67% 18px, 83% 50px, 100% 100px, 100% calc(100% - 100px), 83% calc(100% - 50px), 67% calc(100% - 18px), 50% 100%, 33% calc(100% - 18px), 17% calc(100% - 50px), 0 calc(100% - 100px));
+    margin-top: -100px;
+    margin-bottom: -100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  
+  .curved-section--bottom {
+    clip-path: polygon(0 100px, 17% 50px, 33% 18px, 50% 0, 67% 18px, 83% 50px, 100% 100px, 100% 100%, 0 100%);
+    margin-top: -100px;
+    padding-top: 150px;
+  }
+}
+
+/* Desktop and larger (1025px+) - already defined above with enhanced curves */
+@media (min-width: 1280px) {
+  .curved-section__content {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .curved-section__content {
+    padding: 3rem;
+  }
+}
+
+/* Smooth scroll behavior with anti-flickering */
+.curved-section {
+  scroll-margin-top: 100px;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Anti-flickering optimization for curved sections in scroll stack */
+.scroll-stack-card .curved-section {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  will-change: transform, opacity;
+  contain: layout style paint;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Enhanced glass morphism for stacked sections - Transparent backgrounds */
+.scroll-stack-card .curved-section--glass {
+  background: transparent;
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  will-change: transform, opacity;
+}
+
+/* Hover effects for interactive sections (desktop only) */
+@media (min-width: 1025px) {
+  .curved-section:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 16px 48px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* Improved scroll snap for better mobile experience */
+.curved-section {
+  scroll-snap-align: start;
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .curved-section {
+    scroll-margin-top: 60px;
+  }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+  .curved-section {
+    will-change: auto;
+  }
+  
+  .curved-section--glass {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  .scroll-stack-card .curved-section--glass {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .curved-section {
+    transition: none;
+  }
+  
+  .curved-section:hover {
+    transform: none;
+  }
+}

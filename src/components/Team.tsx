@@ -190,7 +190,7 @@ const Team = () => {
       github: "https://github.com/AmrutaBK",
     },
     {
-      name: "Faiza V",
+      name: "Faiza V K",
       role: "Content Head",
       image: "https://i.ibb.co/JWdC32hR/cropped-circle-image.png",
       linkedin: "https://www.linkedin.com/in/faiza-v-k-40a78616b/",

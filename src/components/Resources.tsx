@@ -1,4 +1,4 @@
-import { Book, Code, Database, FileText, Globe, Layers, Video, Zap } from "lucide-react";
+import { Book, Code, Database, FileText, Github, Globe, Layers, Video, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection, AnimatedContainer, AnimatedItem } from "@/components/ui/animated-section";
 import { fadeInUp, scaleIn, staggerContainer, staggerItem } from "@/lib/animations";
@@ -15,7 +15,7 @@ const Resources = () => {
         { 
           title: "React Essentials Guide (PDF)", 
           type: "PDF", 
-          link: "#" 
+          link: "https://dtc-wsuv.org/dmyers19/DTC%20477-Will%20Luers/FlavioCopes-Handbooks/The%20React%20Handbook/react-handbook.pdf" 
         },
         { 
           title: "Learn React (Official Docs)", 
@@ -89,8 +89,8 @@ const Resources = () => {
       icon: Code,
       color: "text-accent",
       resources: [
-        { title: "Figma for Developers", type: "Video", link: "#" },
-        { title: "Webflow Crash Course", type: "Tutorial", link: "#" },
+        { title: "Lovable Docs", type: "Docs", link: "https://docs.lovable.dev/introduction/welcome" },
+        { title: "Webflow Crash Course", type: "Tutorial", link: "https://youtu.be/XN2cXzPxxRQ" },
         { title: "Notion for Project Management", type: "PDF", link: "#" },
       ],
     },
@@ -100,9 +100,9 @@ const Resources = () => {
       icon: FileText,
       color: "text-accent",
       resources: [
-        { title: "Technical Interview Guide", type: "PDF", link: "#" },
-        { title: "System Design Primer", type: "Article", link: "#" },
-        { title: "Behavioral Questions Bank", type: "PDF", link: "#" },
+        { title: "Technical Interview Guide", type: "Article", link: "https://www.techinterviewhandbook.org/" },
+        { title: "System Design Primer", type: "Article", link: "https://www.designgurus.io/blog/system-design-primer-the-ultimate-guide" },
+        { title: "Behavioral Questions Bank", type: "Article", link: "https://www.techinterviewhandbook.org/behavioral-interview-questions/" },
       ],
     },
   ];
@@ -115,6 +115,14 @@ const Resources = () => {
         return <Video size={16} />;
       case "Article":
         return <Book size={16} />;
+      case "Documentation":
+        return <FileText size={16} />;
+      case "Tutorial":
+        return <Code size={16} />;
+      case "GitHub":
+        return <Github size={16} />;
+      case "Docs":
+        return <FileText size={16} />;
       default:
         return <Code size={16} />;
     }
@@ -187,6 +195,8 @@ const Resources = () => {
                     <motion.a
                       key={idx}
                       href={resource.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-start gap-3 p-4 rounded-xl glass-card transition-colors group cursor-pointer"
                       variants={staggerItem}
                       whileHover={{

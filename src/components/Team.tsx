@@ -159,7 +159,7 @@ const Team = () => {
     {
       name: "Prof. Abhayakumar S Inchal ",
       role: "Faculty Coordinator",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rajesh",
+      image: "https://i.ibb.co/RGRGNVPm/Abhayakumar-Shiddappa-Inchal-Copy-modified.png",
       linkedin: "https://in.linkedin.com/in/abhayakumar-inchal-b26326351",
     },
   ];

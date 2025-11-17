@@ -133,6 +133,19 @@ const Resources = () => {
   return (
     <section id="resources" className="py-24 relative overflow-hidden">
 
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .resources-scroll::-webkit-scrollbar {
+            display: none;
+          }
+
+          .resources-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+        `
+      }} />
+
       <div className="container mx-auto px-6 relative z-10">
         <AnimatedSection animation={fadeInUp} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-text mb-4">
@@ -143,95 +156,144 @@ const Resources = () => {
           </p>
         </AnimatedSection>
 
-        <AnimatedContainer
-          stagger={true}
-          staggerDelay={0.15}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {categories.map((category, index) => (
-            <AnimatedItem
-              key={category.id}
-              animation={scaleIn}
-              index={index}
-            >
+        {/* Mobile horizontal slider */}
+        <div className="md:hidden mb-12">
+          <div className="resources-scroll flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6">
+            {categories.map((category) => (
               <motion.div
-                className="glass-card rounded-3xl p-8 h-full"
-                whileHover={{
-                  scale: 1.03,
-                  y: -8,
-                  rotateY: 3,
-                }}
+                key={category.id}
+                className="snap-center min-w-[85%] glass-card rounded-3xl p-6 backdrop-blur-xl border border-white/10"
+                whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="flex items-center gap-4 mb-6">
-                  <motion.div
-                    className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center"
-                    whileHover={{
-                      scale: 1.1,
-                      rotate: 360,
-                      backgroundColor: "rgba(59, 130, 246, 0.2)"
-                    }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <category.icon className={`${category.color} w-7 h-7`} />
-                  </motion.div>
-                  <motion.h3
-                    className="text-xl font-bold text-primary-text"
-                    whileHover={{ color: "var(--accent)" }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {category.name}
-                  </motion.h3>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center">
+                    <category.icon className={`${category.color} w-6 h-6`} />
+                  </div>
+                  <div>
+                    <p className="text-sm text-secondary-text uppercase tracking-wide">
+                      Category
+                    </p>
+                    <h3 className="text-lg font-semibold text-white">
+                      {category.name}
+                    </h3>
+                  </div>
                 </div>
-
-                <motion.div
-                  className="space-y-4"
-                  variants={staggerContainer}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                >
+                <div className="space-y-3">
                   {category.resources.map((resource, idx) => (
-                    <motion.a
+                    <a
                       key={idx}
                       href={resource.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-start gap-3 p-4 rounded-xl glass-card transition-colors group cursor-pointer"
-                      variants={staggerItem}
+                      className="block bg-white/5 border border-white/10 rounded-2xl p-4"
+                    >
+                      <p className="text-xs text-white/60 mb-1 uppercase tracking-wide">
+                        {resource.type}
+                      </p>
+                      <p className="text-white font-medium leading-snug">
+                        {resource.title}
+                      </p>
+                    </a>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop grid */}
+        <div className="hidden md:block">
+          <AnimatedContainer
+            stagger={true}
+            staggerDelay={0.15}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {categories.map((category, index) => (
+              <AnimatedItem
+                key={category.id}
+                animation={scaleIn}
+                index={index}
+              >
+                <motion.div
+                  className="glass-card rounded-3xl p-8 h-full"
+                  whileHover={{
+                    scale: 1.03,
+                    y: -8,
+                    rotateY: 3,
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="flex items-center gap-4 mb-6">
+                    <motion.div
+                      className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center"
                       whileHover={{
-                        scale: 1.02,
-                        backgroundColor: "rgba(59, 130, 246, 0.05)",
-                        x: 5
+                        scale: 1.1,
+                        rotate: 360,
+                        backgroundColor: "rgba(59, 130, 246, 0.2)"
                       }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <category.icon className={`${category.color} w-7 h-7`} />
+                    </motion.div>
+                    <motion.h3
+                      className="text-xl font-bold text-primary-text"
+                      whileHover={{ color: "var(--accent)" }}
                       transition={{ duration: 0.2 }}
                     >
-                      <motion.div
-                        className="mt-1 text-secondary-text group-hover:text-accent transition-colors"
-                        whileHover={{ scale: 1.2, rotate: 10 }}
+                      {category.name}
+                    </motion.h3>
+                  </div>
+
+                  <motion.div
+                    className="space-y-4"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    {category.resources.map((resource, idx) => (
+                      <motion.a
+                        key={idx}
+                        href={resource.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-start gap-3 p-4 rounded-xl glass-card transition-colors group cursor-pointer"
+                        variants={staggerItem}
+                        whileHover={{
+                          scale: 1.02,
+                          backgroundColor: "rgba(59, 130, 246, 0.05)",
+                          x: 5
+                        }}
                         transition={{ duration: 0.2 }}
                       >
-                        {getResourceIcon(resource.type)}
-                      </motion.div>
-                      <div className="flex-1">
-                        <motion.h4
-                          className="font-semibold text-primary-text group-hover:text-accent transition-colors mb-1"
-                          whileHover={{ x: 3 }}
+                        <motion.div
+                          className="mt-1 text-secondary-text group-hover:text-accent transition-colors"
+                          whileHover={{ scale: 1.2, rotate: 10 }}
                           transition={{ duration: 0.2 }}
                         >
-                          {resource.title}
-                        </motion.h4>
-                        <span className="text-xs text-secondary-text">
-                          {resource.type}
-                        </span>
-                      </div>
-                    </motion.a>
-                  ))}
+                          {getResourceIcon(resource.type)}
+                        </motion.div>
+                        <div className="flex-1">
+                          <motion.h4
+                            className="font-semibold text-primary-text group-hover:text-accent transition-colors mb-1"
+                            whileHover={{ x: 3 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            {resource.title}
+                          </motion.h4>
+                          <span className="text-xs text-secondary-text">
+                            {resource.type}
+                          </span>
+                        </div>
+                      </motion.a>
+                    ))}
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            </AnimatedItem>
-          ))}
-        </AnimatedContainer>
+              </AnimatedItem>
+            ))}
+          </AnimatedContainer>
+        </div>
       </div>
     </section>
   );

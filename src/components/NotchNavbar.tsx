@@ -92,6 +92,12 @@ const NotchNavbar = () => {
             
             {/* Left side - Clean Logo */}
             <div className="flex items-center space-x-2 min-w-0 flex-shrink-0">
+              <img
+                src="https://i.ibb.co/2Y17nGvD/rvce-logo.png"
+                alt="RV College of Engineering logo"
+                className="h-8 w-auto sm:h-9 lg:h-10 drop-shadow-lg"
+                loading="lazy"
+              />
               <Code2 className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-primary drop-shadow-lg" />
               <span className="font-heading font-bold text-base sm:text-lg lg:text-xl text-white">
                 Coder's Club

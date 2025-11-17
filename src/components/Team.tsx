@@ -176,7 +176,7 @@ const Team = () => {
     {
       name: "Abhishek Choudhary",
       role: "Technical Head",
-      image: "https://i.ibb.co/rKFhyFVp/Whats-App-Image-2025-11-07-at-19-34-43-a04da05b-modified.png",
+      image: "https://i.ibb.co/B9XHjBX/IMG-3533-modified.png",
       alt: "Abhishek C - Website Head",
       linkedin: "https://www.linkedin.com/in/abhishek-kumar-choudhary-155052292",
       github: "https://github.com/Abhishek-ch30",

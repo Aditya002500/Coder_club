@@ -66,8 +66,9 @@ const Contact = () => {
                         href="https://chat.whatsapp.com/DPL6tYAbpHG5qav7YbCGXA"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="block"
                       >
-                        <HoverButton className="w-full">
+                        <HoverButton className="w-full md:w-auto mx-auto flex justify-center">
                           Join Community
                         </HoverButton>
                       </a>
@@ -128,11 +129,9 @@ const Contact = () => {
                             <p className="font-semibold mb-1">Email</p>
                             <motion.a
                               href="mailto:codersclubrvitm@gmail.com"
-                              className="text-foreground/70 hover:text-primary transition-colors"
+                              className="text-foreground/70 hover:text-primary transition-colors whitespace-nowrap text-sm sm:text-base"
                               whileHover={{ color: "var(--primary)" }}
-                            >
-                              codersclubrvitm@gmail.com
-                            </motion.a>
+                            >codersclubrvitm@gmail.com</motion.a>
                           </div>
                         </motion.div>
 

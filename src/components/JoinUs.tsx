@@ -177,7 +177,7 @@ const JoinUs = () => {
                     </Button>
                   </a>
                   <p className="responsive-text-sm dot-background-text">
-                    Membership is open to all ISE students. No prior coding
+                    Membership is open to all students. No prior coding
                     experience required!
                   </p>
                 </div>

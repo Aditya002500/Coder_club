@@ -151,7 +151,7 @@ const Team = () => {
   const faculty = [
     {
       name: "Dr.M.Vinoth Kumar ",
-      role: "HOD,ISE",
+      role: "Head Of Department - ISE",
       image: "https://i.ibb.co/yJjG7w7/Whats-App-Image-2025-10-28-at-16-33-13-0cfa91f1-modified.png",
       alt: "Dr. M. Vinoth Kumar - HOD, ISE",
       linkedin: "https://in.linkedin.com/in/drvinothkumarm",

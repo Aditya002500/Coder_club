@@ -24,11 +24,11 @@ const Contact = () => {
         </AnimatedSection>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr]">
+          <div className="space-y-8 lg:space-y-0 lg:grid lg:gap-8 lg:grid-cols-[1.1fr_1fr]">
             {/* WhatsApp Community */}
             <AnimatedItem animation={fadeInLeft}>
               <motion.div
-                className="h-full"
+                className="lg:h-full"
                 whileHover={{
                   scale: 1.02,
                   y: -5,
@@ -36,7 +36,7 @@ const Contact = () => {
                 }}
                 transition={{ duration: 0.3 }}
               >
-                <Card className="glass-card h-full">
+                <Card className="glass-card lg:h-full">
                   <CardContent className="p-8 space-y-6 flex flex-col h-full">
                     <motion.h3
                       className="font-heading text-2xl font-bold"
@@ -88,7 +88,7 @@ const Contact = () => {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Card className="glass-card h-full">
+                  <Card className="glass-card">
                     <CardContent className="p-8 space-y-6 flex flex-col h-full">
                       <div>
                         <motion.h3
@@ -214,7 +214,7 @@ const Contact = () => {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Card className="glass-card h-full">
+                  <Card className="glass-card">
                     <CardContent className="p-8 flex flex-col gap-6 h-full">
                       <motion.h3
                         className="font-heading text-2xl font-bold mb-6"

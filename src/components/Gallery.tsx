@@ -129,10 +129,64 @@ const Gallery = () => {
           .gallery-bento-container .hover\\:shadow-lg:hover {
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
           }
+
+          .horizontal-gallery::-webkit-scrollbar {
+            display: none;
+          }
+
+          .horizontal-gallery {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
         `
       }} />
       
-      <div className="gallery-bento-container relative z-10">
+      {/* Mobile horizontal gallery */}
+      <div className="relative z-10 md:hidden px-4">
+        <div className="text-center mb-6">
+          <h2 className="font-heading text-3xl font-bold text-white drop-shadow-lg">
+            Gallery
+          </h2>
+          <p className="text-white/80 mt-2 text-sm">
+            Swipe through highlights from workshops, hackathons, and community moments
+          </p>
+        </div>
+        <div className="horizontal-gallery flex gap-4 overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4">
+          {galleryImages.map((item) => (
+            <motion.div
+              key={item.id}
+              className="snap-center min-w-[85%] bg-white/5 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-xl shadow-xl"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="relative h-56">
+                <img
+                  src={item.url}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <h3 className="font-semibold text-lg drop-shadow">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-white/85 mt-1">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+              <div className="p-4 flex items-center justify-between text-xs text-white/70 border-t border-white/10">
+                <span>Tap & hold to zoom in</span>
+                <span className="text-primary font-semibold">#{item.id}</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop / tablet bento gallery */}
+      <div className="gallery-bento-container relative z-10 hidden md:block">
         <InteractiveImageBentoGallery
           title="Gallery"
           description="Moments captured from our workshops, hackathons, and coding sessions"

@@ -1,199 +1,33 @@
-import { motion } from "framer-motion";
-import InteractiveImageBentoGallery from "./bento-gallery";
-import { useParallax } from "@/hooks/useScrollAnimation";
+import { ImageAutoSlider } from "./image-auto-slider";
+
+const galleryImages = [
+  "https://i.ibb.co/xKRq6KDc/IMG-20251124-WA0059.jpg",
+  "https://i.ibb.co/DHQRCR9S/IMG-20251124-WA0061.jpg",
+  "https://i.ibb.co/3mfdxYLw/IMG-20251118-WA0019.jpg",
+  "https://i.ibb.co/Ld0ZHrsD/IMG-20251119-WA0008.jpg",
+  "https://i.ibb.co/7xc3696k/IMG-20251119-WA0026.jpg",
+  "https://i.ibb.co/Rk2grftt/IMG-20251119-WA0032.jpg",
+  "https://i.ibb.co/WvT9BDbX/IMG-20251124-WA0057.jpg",
+];
 
 const Gallery = () => {
-  const { ref: parallaxRef, offset } = useParallax(0.2);
-  
-  // Enhanced gallery data with descriptions for bento layout
-  const galleryImages = [
-    {
-      id: 1,
-      title: "Annual Hackathon 2024",
-      desc: "48-hour coding marathon with innovative solutions and prizes",
-      url: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
-      span: "" // Empty span since we use CSS Grid layout
-    },
-    {
-      id: 2,
-      title: "JavaScript Workshop",
-      desc: "Hands-on learning session covering modern JS frameworks",
-      url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
-      span: ""
-    },
-    {
-      id: 3,
-      title: "Team Collaboration",
-      desc: "Members working together on exciting projects",
-      url: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
-      span: ""
-    },
-    {
-      id: 4,
-      title: "Code Review Session",
-      desc: "Peer programming and best practices discussion",
-      url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
-      span: ""
-    },
-    {
-      id: 5,
-      title: "Project Demo Day",
-      desc: "Showcasing innovative solutions and creative projects",
-      url: "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=800&q=80",
-      span: ""
-    },
-    {
-      id: 6,
-      title: "Technical Talk",
-      desc: "Industry expert sharing insights on latest technologies",
-      url: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80",
-      span: ""
-    },
-    {
-      id: 7,
-      title: "Algorithm Workshop",
-      desc: "Deep dive into data structures and problem solving",
-      url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-      span: ""
-    },
-    {
-      id: 8,
-      title: "Open Source Contribution",
-      desc: "Contributing to community projects and learning Git workflows",
-      url: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&q=80",
-      span: ""
-    },
-    {
-      id: 9,
-      title: "Mobile App Development",
-      desc: "Building cross-platform applications with React Native",
-      url: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
-      span: ""
-    },
-    {
-      id: 10,
-      title: "Web Design Showcase",
-      desc: "Creative UI/UX designs and modern web technologies",
-      url: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
-      span: ""
-    }
-  ];
-
   return (
-    <div id="gallery" className="relative overflow-hidden">
-      {/* Parallax Background Elements */}
-      <motion.div
-        ref={parallaxRef}
-        className="absolute inset-0 opacity-20"
-        style={{ y: offset * 0.3 }}
-      >
-        <div className="absolute top-1/4 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl" />
-        <div className="absolute bottom-1/4 right-10 w-40 h-40 bg-accent/10 rounded-full blur-xl" />
-      </motion.div>
+    <section id="gallery" className="relative overflow-hidden py-16 sm:py-20">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-primary/5 blur-3xl" aria-hidden />
 
-      {/* Custom CSS for glass effect integration */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .gallery-bento-container .bg-background {
-            background: transparent !important;
-          }
-          
-          .gallery-bento-container h2 {
-            color: rgba(255, 255, 255, 0.95) !important;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-          }
-          
-          .gallery-bento-container p {
-            color: rgba(255, 255, 255, 0.8) !important;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-          }
-          
-          .gallery-bento-container .bg-card {
-            background: rgba(255, 255, 255, 0.05) !important;
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
-          }
-          
-          .gallery-bento-container .bg-card:hover {
-            background: rgba(255, 255, 255, 0.08) !important;
-            border-color: rgba(255, 255, 255, 0.2) !important;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
-            transform: scale(1.02) translateY(-4px) !important;
-          }
-          
-          .gallery-bento-container .shadow-sm {
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
-          }
-          
-          .gallery-bento-container .hover\\:shadow-lg:hover {
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
-          }
+      <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 text-center">
+        <p className="text-sm uppercase tracking-[0.4em] text-primary/80">Gallery</p>
+        <h2 className="font-heading text-4xl font-bold leading-tight text-white sm:text-5xl">
+          Workshop 1: Low-Code / No-Code Development
+        </h2>
+        <p className="max-w-3xl text-base text-white/70 sm:text-lg">
+          Highlights from our immersive build sprint where members explored low-code tools,
+          rapid prototyping, and collaborative problem solving.
+        </p>
 
-          .horizontal-gallery::-webkit-scrollbar {
-            display: none;
-          }
-
-          .horizontal-gallery {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-          }
-        `
-      }} />
-      
-      {/* Mobile horizontal gallery */}
-      <div className="relative z-10 md:hidden px-4">
-        <div className="text-center mb-6">
-          <h2 className="font-heading text-3xl font-bold text-white drop-shadow-lg">
-            Gallery
-          </h2>
-          <p className="text-white/80 mt-2 text-sm">
-            Swipe through highlights from workshops, hackathons, and community moments
-          </p>
-        </div>
-        <div className="horizontal-gallery flex gap-4 overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4">
-          {galleryImages.map((item) => (
-            <motion.div
-              key={item.id}
-              className="snap-center min-w-[85%] bg-white/5 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-xl shadow-xl"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="relative h-56">
-                <img
-                  src={item.url}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold text-lg drop-shadow">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-white/85 mt-1">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-              <div className="p-4 flex items-center justify-between text-xs text-white/70 border-t border-white/10">
-                <span>Tap & hold to zoom in</span>
-                <span className="text-primary font-semibold">#{item.id}</span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <ImageAutoSlider images={galleryImages} className="mt-4 w-full" speedSeconds={26} />
       </div>
-
-      {/* Desktop / tablet bento gallery */}
-      <div className="gallery-bento-container relative z-10 hidden md:block">
-        <InteractiveImageBentoGallery
-          title="Gallery"
-          description="Moments captured from our workshops, hackathons, and coding sessions"
-          imageItems={galleryImages}
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 

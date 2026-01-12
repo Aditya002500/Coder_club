@@ -130,7 +130,7 @@ const NotchNavbar = () => {
             <div className="flex items-center space-x-3 min-w-0 flex-shrink-0">
               {/* Single Join Us Button */}
               <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLScO-ql3Uu2gdhwavN7mtGFMhkgrzwRWNuDQXW3CzOaddHcqFw/viewform"
+                href="https://forms.gle/oHYdq4rGCtQQBmFK6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden sm:block"

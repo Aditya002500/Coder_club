@@ -163,7 +163,7 @@ const JoinUs = () => {
 
                 <div className="text-center space-y-4">
                   <a 
-                    href="https://docs.google.com/forms/d/e/1FAIpQLScO-ql3Uu2gdhwavN7mtGFMhkgrzwRWNuDQXW3CzOaddHcqFw/viewform" 
+                    href="https://forms.gle/oHYdq4rGCtQQBmFK6" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block"

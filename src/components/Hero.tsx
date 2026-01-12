@@ -94,7 +94,7 @@ const Hero = () => {
               variants={staggerItem}
             >
               <HoverButton
-                onClick={() => scrollToSection("#join")}
+                onClick={() => window.open('https://forms.gle/oHYdq4rGCtQQBmFK6', '_blank')}
                 className="group bg-primary hover:bg-primary/90 text-white border-none touch-target text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3"
               >
                 Join the Club

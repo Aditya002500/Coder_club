@@ -10,24 +10,24 @@ import { fadeInUp, slideInUp, staggerContainer, staggerItem } from "@/lib/animat
 const Workshops = () => {
   const workshops = [
     {
-      title: "Low-Code, No-Code Development",
-      date: "17/11/2025",
-      venue: "Venue to be announced",
-      status: "upcoming",
-      description:
-        "Learn to build and deploy your first website without writing a single line of code. Perfect for beginners!",
-      tags: ["Web Development", "No-Code", "Beginner Friendly"],
-      targetAudience: "First-year ISE students"
-    },
-    {
       title: "DSA BASICS",
-      date: "25/12/2025",
+      date: "To be announced",
       venue: "Venue to be announced",
       status: "upcoming",
       description:
         "Master the fundamentals of Data Structures and Algorithms with hands-on practice.",
       tags: ["DSA", "Algorithms", "Programming"],
       targetAudience: "Second-year ISE students"
+    },
+    {
+      title: "Low-Code, No-Code Development",
+      date: "17/11/2025",
+      venue: "Venue to be announced",
+      status: "past",
+      description:
+        "Learn to build and deploy your first website without writing a single line of code. Perfect for beginners!",
+      tags: ["Web Development", "No-Code", "Beginner Friendly"],
+      targetAudience: "First-year ISE students"
     }
   ];
 
@@ -170,14 +170,10 @@ const Workshops = () => {
                       </Button>
                     ) : (
                       <Button
-                        variant="ghost"
-                        className="group mt-4 w-full justify-between btn-with-icon"
-                        onClick={() => {
-                          // Handle view workshop
-                          console.log(`Viewing workshop: ${workshop.title}`);
-                        }}
+                        disabled
+                        className="mt-4 w-full group btn-with-icon opacity-50 cursor-not-allowed"
                       >
-                        View Workshop
+                        Register for Event
                         <ArrowRight className="transition-transform group-hover:translate-x-1" />
                       </Button>
                     )}

@@ -157,10 +157,10 @@ const Team = () => {
       linkedin: "https://in.linkedin.com/in/drvinothkumarm",
     },
     {
-      name: "Prof. Abhayakumar S Inchal ",
+      name: "Dr. Shruti P ",
       role: "Faculty Coordinator",
-      image: "https://i.ibb.co/RGRGNVPm/Abhayakumar-Shiddappa-Inchal-Copy-modified.png",
-      linkedin: "https://in.linkedin.com/in/abhayakumar-inchal-b26326351",
+      image: "https://i.ibb.co/qY5wVQt8/1748096701429-1-modified.png",
+      linkedin: "https://www.linkedin.com/in/dr-shruthip/",
     },
   ];
 
@@ -203,6 +203,22 @@ const Team = () => {
       alt: "Aditi Karnawat - Technical Head",
       linkedin: "https://www.linkedin.com/in/aditi-karnawat-55606b296/",
       github: "https://github.com/AditiKarnawat",
+    },
+    {
+      name: "Shreya Mohan Bhat",
+      role: "PR Head",
+      image: "https://i.ibb.co/SXhPz82W/Whats-App-Image-2026-03-06-at-23-18-04-modified.png",
+      alt: "Shreya Mohan Bhat - PR Head",
+      linkedin: "https://www.linkedin.com/in/shreya-mohan-bhat-547108293?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      github: "https://github.com/shreyabhat75/",
+    },
+    {
+      name: "Rethash Dev Reddy",
+      role: "Event Head",
+      image: "https://i.ibb.co/7tQJyMhq/Whats-App-Image-2026-03-06-at-23-23-34-modified.png",
+      alt: "Rethash Dev Reddy - PR Head",
+      linkedin: "www.linkedin.com/in/rethash-reddy",
+      github: "https://github.com/reth0608/",
     },
   
   ];

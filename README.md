@@ -1,4 +1,4 @@
-Coder Club
+Coder Club rvitm
 Welcome to Coder Club! This is a modern, responsive web application designed to showcase club activities, projects, workshops, and resources for coding enthusiasts. Built with React, TypeScript, Vite, and Tailwind CSS, the project emphasizes clean UI, modular components, and scalability.
 
 🚀 Features

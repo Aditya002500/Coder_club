@@ -1,4 +1,4 @@
-import { Sparkles, Moon, Sun, CheckCircle2 } from "lucide-react";
+import { Sparkles, Sun, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import {
   Card,
@@ -36,36 +36,18 @@ const Levels = () => {
       ],
     },
     {
-      name: "Eclipse Level",
-      subtitle: "Intermediate",
-      icon: Moon,
-      color: "from-purple-500 to-pink-600",
-      description: "Intermediate members demonstrating proven technical skills and active community contribution",
-      badge: "Intermediate Level",
-      features: [
-        "Lead and coordinate small development project teams",
-        "Provide mentorship and guidance to Nova level members",
-        "Contribute to major club initiatives and strategic planning",
-        "Organize and conduct specialized technical mini workshops",
-        "Enjoy all Nova level benefits with enhanced privileges",
-        "Access to exclusive leadership development opportunities",
-        "Priority enrollment for advanced workshops and masterclasses",
-        "Professional internship recommendations and career support",
-      ],
-    },
-    {
       name: "Zenith Level",
       subtitle: "Advanced",
       icon: Sun,
       color: "from-cyan-500 to-blue-600",
-      description: "Unlock premium coding platforms like LeetCode and HackerRank, plus all Eclipse benefits and exclusive perks for advanced members",
+      description: "Unlock premium coding platforms like LeetCode and HackerRank, plus all Nova benefits and exclusive perks for advanced members",
       badge: "Advanced Level",
       features: [
         "Drive strategic planning and high-level organizational decisions",
         "Oversee and manage major club projects and initiatives",
         "Represent the club at external events and conferences",
         "Guide overall club direction and long-term vision",
-        "Receive all Eclipse level benefits with additional perks",
+        "Receive all Nova level benefits with additional perks",
         "Wield executive decision-making power in club governance",
         "Access to direct industry connections and partnerships",
         "Premium letter of recommendation for career advancement",

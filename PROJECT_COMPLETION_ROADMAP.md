@@ -119,9 +119,8 @@ The website currently has a complex layered structure with multiple background i
 - Inconsistent feature list lengths create visual imbalance
 
 #### Required Changes:
-- **Content Balancing**: Ensure all three membership levels have equivalent content volume:
+- **Content Balancing**: Ensure all membership levels have equivalent content volume:
   - **Nova Level**: Currently 8 features - maintain as baseline
-  - **Eclipse Level**: Currently 8 features - maintain consistency  
   - **Zenith Level**: Currently 8 features - maintain consistency
 - **Visual Harmony**: Equal card heights and content distribution
 - **Feature Restructuring**: Organize features to show natural progression rather than "all previous benefits + new ones"

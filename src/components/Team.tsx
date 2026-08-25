@@ -25,7 +25,7 @@ function TeamMemberCard({ name, role, avatar, linkedin, github, level, isVerifie
       }}
       transition={{ duration: 0.3 }}
     >
-      
+
       {/* Level badge for students */}
       {level && (
         <div className="absolute right-3 sm:right-4 top-3 sm:top-4 z-10">
@@ -157,10 +157,10 @@ const Team = () => {
       linkedin: "https://in.linkedin.com/in/drvinothkumarm",
     },
     {
-      name: "Dr. Shruti P ",
+      name: "Mr. Krupesha D",
       role: "Faculty Coordinator",
-      image: "https://i.ibb.co/qY5wVQt8/1748096701429-1-modified.png",
-      linkedin: "https://www.linkedin.com/in/dr-shruthip/",
+      image: "https://i.ibb.co/HTS1n5qM/ISE-Prof-D-Krupesha.jpg",
+      linkedin: "https://www.linkedin.com/in/krupesha-d-7242b9363/",
     },
   ];
 
@@ -212,15 +212,14 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/shreya-mohan-bhat-547108293?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       github: "https://github.com/shreyabhat75/",
     },
+
     {
-      name: "Rethash Dev Reddy",
-      role: "Event Head",
-      image: "https://i.ibb.co/7tQJyMhq/Whats-App-Image-2026-03-06-at-23-23-34-modified.png",
-      alt: "Rethash Dev Reddy - PR Head",
-      linkedin: "www.linkedin.com/in/rethash-reddy",
-      github: "https://github.com/reth0608/",
+      name: "Adithya D",
+      role: "Finance Head",
+      image: "https://i.ibb.co/BVgj9hpY/Whats-App-Image-2026-03-03-at-12-12-16.jpg",
+      alt: "Adithya Donkey - Finance Head",
+      linkedin: "#",
     },
-  
   ];
 
   return (
@@ -243,7 +242,7 @@ const Team = () => {
               Faculty Coordinators
             </h3>
           </AnimatedSection>
-          
+
           <AnimatedContainer
             stagger={true}
             staggerDelay={0.2}
@@ -273,7 +272,7 @@ const Team = () => {
               Student Leaders
             </h3>
           </AnimatedSection>
-          
+
           <AnimatedContainer
             stagger={true}
             staggerDelay={0.15}
@@ -291,7 +290,7 @@ const Team = () => {
                   avatar={member.image}
                   linkedin={member.linkedin}
                   github={member.github}
-                  
+
                 />
               </AnimatedItem>
             ))}

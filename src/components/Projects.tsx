@@ -43,7 +43,7 @@ const Projects = () => {
       tech: ["React", "D3.js", "Framer Motion"],
       github: "#",
       demo: "#",
-      author: "Team Eclipse",
+      author: "Team Zenith",
     },
   ];
 

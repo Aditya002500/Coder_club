@@ -16,7 +16,7 @@ Component System: Modular, reusable components in components and ui
 State & Hooks: Custom hooks for mobile detection, scroll animation, and toasts
 📁 Project Structure
 🧑‍💻 Getting Started
-Install dependencies
+Install dependencies-
 
 Start the development server
 
